@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <h1>Форма обратной связи</h1>
+        <div class="container">
+            <div class="container fio">
+                <label for="name">ФИО</label>
+                <input id="name" name="name" type="text" required>
+            </div>
+            <div class="container">
+                <label for="email">Адрес электронной почты</label>
+                <input type="email" id="email" name="email" placeholder="Введите email" required>       
+            </div>
+            <fieldset class="container">
+                <legend>Откуда вы узнали о нас?</legend>
+                <div class="where">
+                    <input type="radio" id="friends" value="friends" name="radio_group">
+                    <label for="friends">Рассказали друзья</label>
+                    <input type="radio" id="prom"  value="prom" name="radio_group" checked>
+                    <label for="prom">Реклама в интернете</label>
+                </div>
+            </fieldset>
+            <div class="container">
+                <span>Категория обращения</span>
+                <select class="topic" id="type" name="category" required>
+                    <option value="positive">Предложение</option>
+                    <option value="negative">Жалоба</option>
+                </select>
+            </div>
+            <fieldset class="container">
+                <legend class="label" for="message">Текст сообщения</legend>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </fieldset>
+            <div class="container">
+                <span>Вложение</span>
+                <input name="file" type="file">
+            </div>
+            <div class="data_processing">
+                <input type="checkbox" id="agree" required>
+                <label class="label" for="agree">Даю согласие на обработку персональных данных</label>
+            </div>
+        </div>
+        <input class="button" type="submit" value="Отправить">
+    </form>
+</body>
+</html>
